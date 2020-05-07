@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Teclado Virtual</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./src/css/style.css">
+</head>
+  <body>
+      
+    <div class="container-fluid d-flex flex-column justify-content-center align-items-center" style="height: 89vh;">
+        <div class="container-fluid pt-3 pb-2">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header text-center">
+                            Exemplo teclado no input
+                        </div>
+                        <div class="card-body">
+                            <form>
+                                <div class="row justify-content-center">
+                                  <div class="col-md-7">
+                                    <input type="text" class="form-control" name="id" id="id" placeholder="Exemplo" required>
+                                  </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid d-flex justify-content-center mt-5">
+            <div class="table_teclado" id="keyboard">
+                <ul class="row row-0">
+                  <li class="teclado">1</li>
+                  <li class="teclado">2</li>
+                  <li class="teclado">3</li>
+                  <li class="teclado">4</li>
+                  <li class="teclado">5</li>
+                  <li class="teclado">6</li>
+                  <li class="teclado">7</li>
+                  <li class="teclado">8</li>
+                  <li class="teclado">9</li>
+                  <li class="teclado">0</li>
+                </ul>
+                <ul class="row row-1">
+                  <li class="teclado">Q</li>
+                  <li class="teclado">W</li>
+                  <li class="teclado">E</li>
+                  <li class="teclado">R</li>
+                  <li class="teclado">T</li>
+                  <li class="teclado">Y</li>
+                  <li class="teclado">U</li>
+                  <li class="teclado">I</li>
+                  <li class="teclado">O</li>
+                  <li class="teclado">P</li>
+                </ul>
+                <ul class="row row-2">
+                  <li class="teclado">A</li>
+                  <li class="teclado">S</li>
+                  <li class="teclado">D</li>
+                  <li class="teclado">F</li>
+                  <li class="teclado">G</li>
+                  <li class="teclado">H</li>
+                  <li class="teclado">J</li>
+                  <li class="teclado">K</li>
+                  <li class="teclado">L</li>
+                  <li class="teclado"></li>
+                </ul>
+                <ul class="row row-3">
+                  <li class="teclado">Z</li>
+                  <li class="teclado">X</li>
+                  <li class="teclado">C</li>
+                  <li class="teclado">V</li>
+                  <li class="teclado">B</li>
+                  <li class="teclado">N</li>
+                  <li class="teclado">M</li>
+                  <li class="teclado"></li>
+                  <li class="teclado" id="left-shift">APAGAR</li>
+                </ul>
+            </div>
+        </div>  
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  
+    <script>
+        $(document).ready(function(){
+            $('.table_teclado ul li').click(function(){
+                var number = $(this).text();
+                
+                if (number == 'APAGAR')
+                {
+                    $('#id').val($('#id').val().substr(0, $('#id').val().length - 1)).focus();
+                }
+                else
+                {
+                    $('#id').val($('#id').val() + number).focus();
+                }
+
+            });
+        });
+    </script>    
+</body>
+</html>

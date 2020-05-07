@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+      
+    <section class="container" id="pagamento">
+        <div class="row justify-content-center">
+          <div class="col-md-6 bg-light mb-5" style="border-radius: 10px; width: 100%;">
+                <form class="p-3">
+                  <span class="title">Dados do cartão</span>
+                  <div class="form-row mt-4">
+                    <div class="form-group col-md-12">
+                      <input type="text" class="form-control borda-none" id="Nome" name="Nome" placeholder="Nome escrito no cartão" onkeyup="ChangeCardName()">
+                    </div>
+                    <div class="form-group col-md-6">
+                      <input type="text" class="form-control borda-none" id="Numero" name="Numero" placeholder="Numero do cartão" onkeyup="ChangeCardNumber()">
+                    </div>
+                    <div class="form-group col-md-2">
+                      <select id="MesValidade" name="MesValidade" class="form-control borda-none text-center" onclick="ChangeCardValidade()">
+                          <option selected>Mes</option>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                          <option value="6">6</option>
+                          <option value="7">7</option>
+                          <option value="8">8</option>
+                          <option value="9">9</option>
+                          <option value="10">10</option>
+                          <option value="11">11</option>
+                          <option value="12">12</option>
+                      </select>
+                    </div>
+                    <div class="form-group col-md-2">
+                      <select id="AnoValidade" name="AnoValidade" class="form-control borda-none text-center" onclick="ChangeCardValidade()">
+                          <option selected>Ano</option>
+                          <option value="2020">2020</option>
+                          <option value="2021">2021</option>
+                          <option value="2022">2022</option>
+                          <option value="2023">2023</option>
+                          <option value="2024">2024</option>
+                          <option value="2025">2025</option>
+                          <option value="2026">2026</option>
+                          <option value="2027">2027</option>
+                          <option value="2028">2028</option>
+                          <option value="2029">2029</option>
+                          <option value="2030">2030</option>
+                      </select>                      
+                    </div>
+                    <div class="form-group col-md-2">
+                      <input type="text" class="form-control borda-none" id="CVV" name="CVV" placeholder="CVV" onkeyup="ChangeCardCVV()" maxlength="3">
+                    </div>
+                    <div class="col-md-12 text-center">
+                      <button type="submit" class="btn btn-success" style="width: 100%; border-radius: 6px;">Pagar</button>
+                    </div>
+                  </div>
+                </form>
+          </div>
+          <div class="col-md-5 bg-success mb-5 ml-5" style="border-radius: 10px; width: 100%;">
+            <div class="row justify-content-end">
+              <div class="col-md-4">
+                <h3 class="text-white ml-2 pt-3"><b>LOGO</b></h3>
+              </div>
+            </div>
+            <div class="row mt-4">
+              <div class="col-md-4">
+                <img src="./img/chip.png" alt="" width="50px">
+              </div>
+            </div>
+            <div class="row  text-white" style="font-size: 16pt;">
+              <div class="col-md-8">
+                <p id="cardNumber"></p>
+              </div>
+              <div class="col-md-4">
+                <p id="cardCVV"></p>
+              </div>
+            </div>
+            <div class="row  text-white" style="font-size: 16pt;">
+              <div class="col-md-6">
+                <p class="text-uppercase" id="cardName"></p>
+              </div>
+              <div class="col-md-6">
+                <p id="cardValidadade"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  
+    <script>
+        function ChangeCardNumber(){
+            valor = document.getElementById("Numero").value;
+            document.getElementById("cardNumber").innerHTML = valor; 
+        };
+  
+        function ChangeCardName(){
+            valor = document.getElementById("Nome").value;
+            document.getElementById("cardName").innerHTML = valor; 
+        };
+  
+        function ChangeCardCVV(){
+            valor = document.getElementById("CVV").value;
+            document.getElementById("cardCVV").innerHTML =  "CVV:" + valor; 
+        };
+  
+        function ChangeCardValidade(){
+  
+          var selectAno = document.getElementById('AnoValidade');
+            var Ano = selectAno.options[selectAno.selectedIndex].value;
+  
+          var selectMes = document.getElementById('MesValidade');
+            var Mes = selectMes.options[selectMes.selectedIndex].value;
+            
+          document.getElementById("cardValidadade").innerHTML =  "VALIDADE: " + Mes + "/" + Ano; 
+        };
+  
+    </script>
+</body>
+</html>
