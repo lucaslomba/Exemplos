@@ -1,2 +1,3 @@
 [0623/223054.533:ERROR:crash_report_database_win.cc(469)] failed to stat report
 [0623/223058.712:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0702/173446.192:ERROR:file_io.cc(89)] ReadExactly: expected 36, observed 0

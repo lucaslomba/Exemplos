@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+
+</head>
+  <body>
+
+        <div class="container-fluid mt-5">
+          <div class="row justify-content-center">
+            <div class=" col-sm-12 col-md-4" id="newPassword">
+                <div class="card" style="width: 100%; border-radius: 10px; height: 100%">
+                    <div class="card-body" style=" margin: 10px; border-radius: 10px">
+                        <form>
+                            <div class="form-group">
+                                <label for="antigasenha">Digite sua senha</label>
+                                <div class="d-flex align-items-center">
+                                    <input type="password" class="form-control" id="antigasenha" name="antigasenha" placeholder="Senha...">
+                                    <i class="fas fa-eye ml-2" id="senha1" style="cursor: pointer; color: blue" onclick="exibir1()"></i>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="novasenha">Nova senha</label>
+                                <div class="d-flex align-items-center">
+                                    <input type="password" class="form-control" id="novasenha" name="novasenha" placeholder="Nova senha...">
+                                    <i class="fas fa-eye ml-2" id="senha2" style="cursor: pointer; color: blue" onclick="exibir2()"></i>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="novasenha_confirma">Confirmar nova senha</label>
+                                <div class="d-flex align-items-center">
+                                    <input type="password" class="form-control" id="novasenha_confirma" name="novasenha_confirma" placeholder="Confirmar nova senha...">
+                                    <i class="fas fa-eye ml-2" id="senha3" style="cursor: pointer; color: blue" onclick="exibir3()"></i>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-center mt-5">
+                                <button type="submit" class="btn" style="background-color: blue; color: white">Salvar senha</button>                        
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- /.col -->
+          </div>
+          <!-- /.row -->
+        </div>
+        <!-- /.container-fluid -->
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  
+    <script>
+        function exibir1(){
+            $("#antigasenha").attr("type", "text");
+            $("#senha1").attr("onclick", "ocultar1()")
+        }
+    
+        function ocultar1(){
+            $("#antigasenha").attr("type", "password");
+            $("#senha1").attr("onclick", "exibir1()")
+        }
+    
+        function exibir2(){
+            $("#novasenha").attr("type", "text");
+            $("#senha2").attr("onclick", "ocultar2()")
+        }
+    
+        function ocultar2(){
+            $("#novasenha").attr("type", "password");
+            $("#senha2").attr("onclick", "exibir2()")
+        }
+    
+        function exibir3(){
+            $("#novasenha_confirma").attr("type", "text");
+            $("#senha3").attr("onclick", "ocultar3()")
+        }
+    
+        function ocultar3(){
+            $("#novasenha_confirma").attr("type", "password");
+            $("#senha3").attr("onclick", "exibir3()")
+        }
+    
+      </script>
+</body>
+</html>
