@@ -3,5 +3,8 @@
 </h1>
 
 <h2 align="center"> 
-	Seja bem-vindo a esse repositorio de exemplos 🚀
+	Welcome to this sample repository🚀
+</h2>
+<h2 align="center"> 
+	Seja bem-vindo a esse repositorio de exemplos🚀
 </h2>
