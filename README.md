@@ -10,7 +10,7 @@
 
 Nos ultimos anos, fui criando esse repositorio aos poucos, armazenando novos conhecimentos, para facilitar quando fosse necessario usalos em novas atividades!
 
-### Utilidades
+## 💻 Utilidades
 - Otimização de tempo
 - Armazenamento de conhecimentos
 - Ajudar pessoas que estão com um problema semelhante
