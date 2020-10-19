@@ -4,7 +4,6 @@
 
 <h2 align="center"> 
 	Welcome to this sample repository🚀
-</h2>
-<h2 align="center"> 
-	Seja bem-vindo a esse repositorio de exemplos🚀
+    <br>
+    <span>Seja bem-vindo a esse repositorio de exemplos🚀</span>
 </h2>
